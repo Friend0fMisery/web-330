@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment name</title>
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/5DACB2B0-5003-6543-8B39-D8EE6E4FC44C/main.js"
+      charset="UTF-8">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h4>Delete Button</h4>
+    <button type="button" id="delete1">Press Me</button>
+    <script>
+      $(function() {
+        $("#delete1").click(function() {
+          $.ajax({
+            url: "http://httpbin.org/delete",
+            dataType: "json",
+            type: "DELETE",
+            data: {username: "justin", password: "top-secret", id: "jds123"},
+            success: function(data, status) {
+              console.log("Username: " + data.form.username + "\nPassword: " + data.form.password
+              + "\nID: " + data.form.id + "\nStatus: " + status);
+            }
+          })
+        });
+      });
+    </script>
+  </body>
+</html>
