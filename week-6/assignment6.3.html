@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <title>Exercise 6.2</title>
+    <title>Exercise 6.3</title>
 
     <!-- Stylesheet - Bootstrap -->
     <link
@@ -46,12 +46,12 @@
       </div>
     </div>
     <script>
-      function PersonViewModel() {
-        this.firstName = ko.observable("Justin");
-        this.lastName = ko.observable("Singleton");
-        this.emailAddress = ko.observable("jsingleton@my365.bellevue.edu");
+      var personViewModel = {
+        firstName: "Justin",
+        lastName: "Singleton",
+        emailAddress: "jsingleton@my365.bellevue.edu"
       }
-      ko.applyBindings(new PersonViewModel());
+      ko.applyBindings(personViewModel);
     </script>
   </body>
 </html>
